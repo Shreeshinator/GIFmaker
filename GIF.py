@@ -1,12 +1,15 @@
 import imageio.v3 as iio
 
+# add your file names here!
 filenames = ['team-pic1.png', 'team-pic2.png']
-images = [ ]
 
-for filename in filenames:
-  images.append(iio.imread(filename))
+def makeGIF(filenames):
+  images = [ ]
+  for filename in filenames:
+    images.append(iio.imread(filename))
 
-iio.imwrite('team.gif', images, duration = 500, loop = 0)
+  iio.imwrite('team.gif', images, duration = 500, loop = 0)
+  return images
 
 
 
